@@ -1,0 +1,9 @@
+{% extends "layout.html" %} {% block content %}
+<h1>Add New Employee</h1>
+{% endblock %}
+
+<form method="post">
+    {% csrf_token %} 
+    {{form}}
+    <input type="button" value='submit'>submit</button>t
+</form>
