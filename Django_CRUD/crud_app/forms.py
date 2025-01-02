@@ -1,9 +1,9 @@
 from django import forms
-from .models import EmployeeDetails
+from .models import EmployeeDetail
 class AddEmployee(forms.ModelForm):
     
     class Meta:
-        model = EmployeeDetails
+        model = EmployeeDetail
         fields = ['empId', 'empName', 'empEmail', 'empPassword']
 
     # class Meta():

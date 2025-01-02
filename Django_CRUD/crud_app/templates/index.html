@@ -1,3 +1,11 @@
-{% extends "layout.html" %} {% block content %}
-<h1>Employee Details</h1>
-{% endblock %}
+{% extends "layout.html" %} {% block pageHeading %}
+<h1>Employees List</h1>
+{% endblock %} {% block pageContent %} {% for detail in details %}
+<div class="card" style="width: 45rem">
+  <div class="card-body">
+    <h5 class="card-title">EmpId: {{detail.empId}}</h5>
+    <h5 class="card-title">EmpName: {{detail.empName}}</h5>
+    <h5 class="card-title">EmpEmail: {{detail.empEmail}}</h5>
+  </div>
+</div>
+{% endfor %} {% endblock %}
