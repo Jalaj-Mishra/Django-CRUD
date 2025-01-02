@@ -1,9 +1,11 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %} {% block pageHeading %}
 <h1>Add New Employee</h1>
 {% endblock %}
-
+{% block pageContent %}
 <form method="post">
     {% csrf_token %} 
     {{form}}
-    <input type="button" value='submit'>submit</button>t
+    <button type="submit" class="btn btn-primary">Add</button>
 </form>
+<a class="btn btn-primary" href="{% url 'add' %}">back to home</a>
+{% endblock %}
